@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benefits for Our Clients</title>
+  <title>Client Benefits</title>
   <style>
     * {
       box-sizing: border-box;
@@ -24,28 +24,24 @@
       align-items: center;
       justify-content: center;
       padding: 2rem;
-      position: relative;
     }
 
     .content-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
       max-width: 1200px;
       width: 100%;
-      gap: 2rem;
+      position: relative;
     }
 
-    .left-column h1 {
-      font-size: 2.8rem;
-      line-height: 1.2;
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 3rem;
     }
 
-    .cards-container {
+    .cards-layout {
       position: relative;
       width: 100%;
-      min-height: 400px;
-      margin-top: 2rem;
+      height: 600px;
     }
 
     .card {
@@ -55,8 +51,9 @@
       width: 250px;
       padding: 1rem;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       text-align: center;
+      transition: transform 0.3s ease;
     }
 
     .card img {
@@ -72,34 +69,34 @@
 
     .card p {
       font-size: 0.9rem;
-      line-height: 1.4;
     }
 
-    /* Position each card */
-    .card1 { top: 0; left: 50%; transform: translateX(-50%); }
-    .card2 { top: 50%; left: 0; transform: translateY(-50%); }
-    .card3 { top: 50%; right: 0; transform: translateY(-50%); }
-    .card4 { bottom: 0; left: 50%; transform: translateX(-50%); }
+    /* Positioning the cards like a diamond */
+    .card1 { top: 0; left: 50%; transform: translate(-50%, 0); }
+    .card2 { top: 45%; left: 0; transform: translate(0, -50%); }
+    .card3 { top: 45%; right: 0; transform: translate(0, -50%); }
+    .card4 { bottom: 0; left: 50%; transform: translate(-50%, 0); }
 
+    /* Responsive for smaller screens */
     @media (max-width: 768px) {
-      .cards-container {
+      .cards-layout {
         position: static;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+        height: auto;
       }
+
       .card {
         position: static;
         transform: none;
         width: 90%;
       }
-      .left-column h1 {
-        text-align: center;
+
+      .title {
         font-size: 2rem;
-      }
-      .content-wrapper {
-        align-items: center;
+        text-align: center;
       }
     }
   </style>
@@ -108,29 +105,27 @@
 
   <div class="hero">
     <div class="content-wrapper">
-      <div class="left-column">
-        <h1>Benefits<br>for Our<br>Clients</h1>
-      </div>
-      <div class="cards-container">
+      <div class="title">Benefits for Our Clients</div>
+      <div class="cards-layout">
         <div class="card card1">
           <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
           <h3>Updates & Security</h3>
-          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+          <p>We keep your software updated and secure, protecting your website from digital threats.</p>
         </div>
         <div class="card card2">
           <img src="https://cdn-icons-png.flaticon.com/512/1904/1904425.png" alt="Performance Optimization">
           <h3>Performance Optimization</h3>
-          <p>We keep your software optimized and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+          <p>We improve your website’s speed and efficiency, ensuring top-notch performance.</p>
         </div>
         <div class="card card3">
-          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
+          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="More Security">
           <h3>Updates & Security</h3>
-          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+          <p>Consistent updates keep your system safe from vulnerabilities and attacks.</p>
         </div>
         <div class="card card4">
           <img src="https://cdn-icons-png.flaticon.com/512/1904/1904437.png" alt="Backups Recovery">
           <h3>Backups Recovery</h3>
-          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+          <p>We ensure your data is backed up and can be restored easily in case of emergencies.</p>
         </div>
       </div>
     </div>
