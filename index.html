@@ -3,72 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Benefits for Our Clients</title>
+  <title>Responsive Design Demo</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      margin: 0;
-    }
-
-    .bg-fixed-vertical {
-      background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: top center;
-      height: 200vh; /* makes it overflow vertically */
-    }
-  </style>
 </head>
-<body class="bg-fixed-vertical relative text-white">
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm z-0"></div>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-7xl mx-auto">
+    <h1 class="text-3xl sm:text-4xl font-bold mb-6 text-center">
+      Responsive Design Example
+    </h1>
 
-  <!-- Content Section -->
-  <div class="relative z-10 flex items-center justify-center min-h-screen p-6">
-    <div class="max-w-7xl w-full">
-      <!-- Heading -->
-      <div class="mb-10">
-        <h1 class="text-4xl font-bold leading-tight">Benefits<br>for Our<br>Clients</h1>
+    <!-- Responsive Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h2 class="text-xl font-semibold mb-2">Card 1</h2>
+        <p>This adjusts from 1 to 3 columns based on screen size.</p>
       </div>
-
-      <!-- Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-white text-black rounded-xl shadow-md p-6 text-center">
-          <img src="https://source.unsplash.com/100x100/?technology,gear" alt="Updates & Security" class="mx-auto mb-4" />
-          <h2 class="text-lg font-bold mb-2">Updates & Security</h2>
-          <p class="text-sm text-gray-700">
-            We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="bg-white text-black rounded-xl shadow-md p-6 text-center">
-          <img src="https://source.unsplash.com/100x100/?performance,gear" alt="Performance Optimization" class="mx-auto mb-4" />
-          <h2 class="text-lg font-bold mb-2">Performance Optimization</h2>
-          <p class="text-sm text-gray-700">
-            We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-white text-black rounded-xl shadow-md p-6 text-center">
-          <img src="https://source.unsplash.com/100x100/?backup,data" alt="Backups Recovery" class="mx-auto mb-4" />
-          <h2 class="text-lg font-bold mb-2">Backups Recovery</h2>
-          <p class="text-sm text-gray-700">
-            We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.
-          </p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="bg-white text-black rounded-xl shadow-md p-6 text-center">
-          <img src="https://source.unsplash.com/100x100/?technology,security" alt="Updates & Security" class="mx-auto mb-4" />
-          <h2 class="text-lg font-bold mb-2">Updates & Security</h2>
-          <p class="text-sm text-gray-700">
-            We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.
-          </p>
-        </div>
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h2 class="text-xl font-semibold mb-2">Card 2</h2>
+        <p>Resize the window to see layout change.</p>
       </div>
+      <div class="bg-white p-6 rounded shadow text-center">
+        <h2 class="text-xl font-semibold mb-2">Card 3</h2>
+        <p>Uses Tailwind’s responsive utility classes.</p>
+      </div>
+    </div>
+
+    <!-- Responsive Image -->
+    <div class="mt-8 text-center">
+      <img src="https://source.unsplash.com/800x400/?nature" alt="Nature" class="w-full max-w-2xl mx-auto rounded" />
+      <p class="mt-2 text-gray-600 text-sm">Responsive image with fluid width</p>
     </div>
   </div>
 </body>
