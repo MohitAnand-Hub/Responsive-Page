@@ -20,48 +20,43 @@
       background-size: cover;
       min-height: 100vh;
       color: white;
-      padding: 2rem;
       display: flex;
       align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
     }
 
     .content-wrapper {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
+      flex-direction: column;
+      align-items: flex-start;
       max-width: 1200px;
-      margin: auto;
       width: 100%;
-    }
-
-    .left-column {
-      flex: 1 1 300px;
-      max-width: 300px;
+      gap: 2rem;
     }
 
     .left-column h1 {
-      font-size: 2.5rem;
-      margin: 0;
+      font-size: 2.8rem;
       line-height: 1.2;
     }
 
-    .cards {
-      flex: 2 1 600px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
+    .cards-container {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+      margin-top: 2rem;
     }
 
     .card {
-      background-color: white;
+      position: absolute;
+      background: white;
       color: #333;
-      border-radius: 10px;
-      padding: 1rem;
       width: 250px;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
     .card img {
@@ -72,7 +67,6 @@
 
     .card h3 {
       margin: 0.5rem 0;
-      font-size: 1.1rem;
       color: #0a3d62;
     }
 
@@ -81,19 +75,31 @@
       line-height: 1.4;
     }
 
+    /* Position each card */
+    .card1 { top: 0; left: 50%; transform: translateX(-50%); }
+    .card2 { top: 50%; left: 0; transform: translateY(-50%); }
+    .card3 { top: 50%; right: 0; transform: translateY(-50%); }
+    .card4 { bottom: 0; left: 50%; transform: translateX(-50%); }
+
     @media (max-width: 768px) {
-      .content-wrapper {
+      .cards-container {
+        position: static;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
+      }
+      .card {
+        position: static;
+        transform: none;
+        width: 90%;
+      }
+      .left-column h1 {
         text-align: center;
+        font-size: 2rem;
       }
-
-      .left-column {
-        max-width: 100%;
-      }
-
-      .cards {
-        justify-content: center;
+      .content-wrapper {
+        align-items: center;
       }
     }
   </style>
@@ -105,25 +111,25 @@
       <div class="left-column">
         <h1>Benefits<br>for Our<br>Clients</h1>
       </div>
-      <div class="cards">
-        <div class="card">
+      <div class="cards-container">
+        <div class="card card1">
+          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
+          <h3>Updates & Security</h3>
+          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+        </div>
+        <div class="card card2">
           <img src="https://cdn-icons-png.flaticon.com/512/1904/1904425.png" alt="Performance Optimization">
           <h3>Performance Optimization</h3>
           <p>We keep your software optimized and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
         </div>
-        <div class="card">
+        <div class="card card3">
           <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
           <h3>Updates & Security</h3>
           <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
         </div>
-        <div class="card">
+        <div class="card card4">
           <img src="https://cdn-icons-png.flaticon.com/512/1904/1904437.png" alt="Backups Recovery">
           <h3>Backups Recovery</h3>
-          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
-        </div>
-        <div class="card">
-          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
-          <h3>Updates & Security</h3>
           <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
         </div>
       </div>
