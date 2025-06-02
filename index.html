@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Example</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page with Fluid Grids & Flexible Images</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      color: #333;
     }
 
     header {
-      background: #0d47a1;
+      background-color: #007acc;
       color: white;
-      padding: 1em;
+      padding: 1rem;
       text-align: center;
     }
 
     .container {
       display: flex;
       flex-wrap: wrap;
-      padding: 1em;
+      padding: 1rem;
+      gap: 1rem;
+      justify-content: center;
     }
 
-    .box {
-      flex: 1 1 45%;
-      background: #f1f1f1;
-      margin: 1em;
-      padding: 1em;
-      text-align: center;
+    .card {
+      flex: 1 1 30%;
+      min-width: 250px;
+      background-color: white;
+      padding: 1rem;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    img {
+    .card img {
       max-width: 100%;
       height: auto;
+      border-radius: 6px;
     }
 
-    @media (max-width: 600px) {
-      .box {
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 45%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
         flex: 1 1 100%;
       }
     }
@@ -46,20 +62,30 @@
 </head>
 <body>
 
-<header>
-  <h1>Responsive Web Page</h1>
-</header>
+  <header>
+    <h1>Responsive Web Page</h1>
+    <p>Using Fluid Grids and Flexible Images</p>
+  </header>
 
-<div class="container">
-  <div class="box">
-    <h2>Flexible Layout</h2>
-    <p>Boxes adapt to screen size</p>
-  </div>
-  <div class="box">
-    <h2>Responsive Images</h2>
-    <img src="https://source.unsplash.com/400x200/?tech" alt="Tech image" />
-  </div>
-</div>
+  <section class="container">
+    <div class="card">
+      <h2>Card 1</h2>
+      <img src="https://source.unsplash.com/400x200/?nature" alt="Nature">
+      <p>This card scales and adjusts with the screen size.</p>
+    </div>
+
+    <div class="card">
+      <h2>Card 2</h2>
+      <img src="https://source.unsplash.com/400x200/?technology" alt="Technology">
+      <p>Images resize fluidly with their containers.</p>
+    </div>
+
+    <div class="card">
+      <h2>Card 3</h2>
+      <img src="https://source.unsplash.com/400x200/?city" alt="City">
+      <p>Layout adapts from three columns to one on mobile.</p>
+    </div>
+  </section>
 
 </body>
 </html>
