@@ -1,91 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Page with Fluid Grids & Flexible Images</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Benefits for Our Clients</title>
   <style>
     * {
       box-sizing: border-box;
     }
 
-    body {
+    body, html {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f4f8;
-      color: #333;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    header {
-      background-color: #007acc;
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?business,technology') no-repeat center center;
+      background-size: cover;
+      min-height: 100vh;
       color: white;
-      padding: 1rem;
-      text-align: center;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
     }
 
-    .container {
+    .content-wrapper {
       display: flex;
       flex-wrap: wrap;
-      padding: 1rem;
-      gap: 1rem;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      width: 100%;
+    }
+
+    .left-column {
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+
+    .left-column h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    .cards {
+      flex: 2 1 600px;
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
+      gap: 1.5rem;
     }
 
     .card {
-      flex: 1 1 30%;
-      min-width: 250px;
       background-color: white;
+      color: #333;
+      border-radius: 10px;
       padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
     .card img {
       max-width: 100%;
       height: auto;
-      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #0a3d62;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
     }
 
     @media (max-width: 768px) {
-      .card {
-        flex: 1 1 45%;
+      .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
-    }
 
-    @media (max-width: 480px) {
-      .card {
-        flex: 1 1 100%;
+      .left-column {
+        max-width: 100%;
+      }
+
+      .cards {
+        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Responsive Web Page</h1>
-    <p>Using Fluid Grids and Flexible Images</p>
-  </header>
-
-  <section class="container">
-    <div class="card">
-      <h2>Card 1</h2>
-      <img src="https://source.unsplash.com/400x200/?nature" alt="Nature">
-      <p>This card scales and adjusts with the screen size.</p>
+  <div class="hero">
+    <div class="content-wrapper">
+      <div class="left-column">
+        <h1>Benefits<br>for Our<br>Clients</h1>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904425.png" alt="Performance Optimization">
+          <h3>Performance Optimization</h3>
+          <p>We keep your software optimized and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
+          <h3>Updates & Security</h3>
+          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904437.png" alt="Backups Recovery">
+          <h3>Backups Recovery</h3>
+          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1904/1904444.png" alt="Updates & Security">
+          <h3>Updates & Security</h3>
+          <p>We keep your software updated and secure, protecting your website from digital threats like a superhero with a digital shield.</p>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <h2>Card 2</h2>
-      <img src="https://source.unsplash.com/400x200/?technology" alt="Technology">
-      <p>Images resize fluidly with their containers.</p>
-    </div>
-
-    <div class="card">
-      <h2>Card 3</h2>
-      <img src="https://source.unsplash.com/400x200/?city" alt="City">
-      <p>Layout adapts from three columns to one on mobile.</p>
-    </div>
-  </section>
+  </div>
 
 </body>
 </html>
